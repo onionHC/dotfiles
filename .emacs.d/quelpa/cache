@@ -1,0 +1,1 @@
+((multiple-cursors) (omnisharp) (gtags-mode) (gtags) (csharp-mode) (quelpa :repo "quelpa/quelpa" :fetcher github))

@@ -1,0 +1,263 @@
+This is d:/temp/flycheck5092nzP/flycheck-20150412.1842/languages.info, produced by makeinfo version 4.13 from d:/cygwin/home/potato/.emacs.d/quelpa/build/flycheck/doc/languages.texi.
+
+Ada
+===
+
+   * ada-gnat (GNAT (https://gcc.gnu.org/onlinedocs/gnat_ugn_unw/)),
+     with the following options:
+
+    `flycheck-gnat-args'
+          A list of additional arguments to GNAT.
+
+    `flycheck-gnat-include-path'
+          A list of include directories for GNAT.  Relative paths are
+          relative to the file being checked.
+
+    `flycheck-gnat-language-standard'
+          The language standard to use in GNAT, as string.
+
+    `flycheck-gnat-warnings'
+          A list of additional warnings to enable in GNAT.  Each item
+          is the name of a warning category to enable.
+
+
+AsciiDoc
+========
+
+   * asciidoc (AsciiDoc (http://www.methods.co.nz/asciidoc))
+
+C/C++
+=====
+
+  1. c/c++-clang (syntax and type check with Clang
+     (http://clang.llvm.org/)) or c/c++-gcc (syntax and type check with
+     GCC (https://gcc.gnu.org/)), and
+
+  2. c/c++-cppcheck (style and error check with cppcheck
+     (http://cppcheck.sourceforge.net/)).
+
+   c/c++-clang and c/c++-gcc provide the following options:
+
+`flycheck-clang-args'
+`flycheck-gcc-args'
+     A list of additional arguments for Clang/GCC.
+
+`flycheck-clang-blocks'
+     Whether to enable blocks in Clang.
+
+`flycheck-clang-definitions'
+`flycheck-gcc-definitions'
+     A list of additional preprocessor definitions for Clang/GCC.
+
+`flycheck-clang-include-path'
+`flycheck-gcc-include-path'
+     A list of include directories for Clang/GCC, relative to the file
+     being checked.
+
+`flycheck-clang-includes'
+`flycheck-gcc-includes'
+     A list of additional include files for Clang/GCC, relative to the
+     file being checked.
+
+`flycheck-clang-language-standard'
+`flycheck-gcc-language-standard'
+     The language standard to use in Clang/GCC, as string, via the
+     `-std' option.
+
+`flycheck-clang-ms-extensions'
+     Whether to enable Microsoft extensions to C/C++ in Clang.
+
+`flycheck-clang-no-exceptions'
+
+`flycheck-gcc-no-exceptions'
+     Whether to disable exceptions in Clang/GCC.
+
+`flycheck-clang-no-rtti'
+`flycheck-gcc-no-rtti'
+     Whether to disable RTTI in Clang/GCC, via `-fno-rtti'.
+
+`flycheck-clang-standard-library'
+     The name of the standard library to use for Clang, as string.
+
+`flycheck-gcc-openmp'
+     Whether to enable OpenMP in GCC.
+
+`flycheck-clang-pedantic'
+
+`flycheck-gcc-pedantic'
+     Whether to warn about language extensions in Clang/GCC.
+
+`flycheck-clang-pedantic-errors'
+
+`flycheck-gcc-pedantic-errors'
+     Whether to error on language extensions in Clang/GCC.
+
+`flycheck-clang-warnings'
+`flycheck-gcc-warnings'
+     A list of additional warnings to enable in Clang.  Each item is
+     the name of a warning or warning category for `-W'.
+
+c/c++-cppcheck provides the following options:
+
+`flycheck-cppcheck-checks'
+     A list of enabled checks for cppcheck.  Each item is the name of a
+     check for the `--enable' option.
+
+`flycheck-cppcheck-inconclusive'
+     Whether to enable inconclusive checks in cppcheck.  These checks
+     may yield more false positives than normal checks.
+
+CFEngine
+========
+
+   * cfengine (CFEngine (http://cfengine.com/))
+
+Chef
+====
+
+   * chef-foodcritic (style check with foodcritic
+     (http://acrmp.github.io/foodcritic/)), with the following option:
+
+    `flycheck-foodcritic-tags'
+          A list of tags to select for Foodcritic.
+
+
+Coffeescript
+============
+
+  1. coffee (syntax check with coffee (http://coffeescript.org/))
+
+  2. coffee-coffeelint (code style check with coffeelint
+     (http://www.coffeelint.org/)), with the following option:
+
+    `flycheck-coffeelintrc'
+          Configuration file for coffeelint.  *Note Syntax checker
+          configuration files::, for more information about
+          configuration files.
+
+
+Coq
+===
+
+   * coq (Coq (http://coq.inria.fr/))
+
+CSS
+===
+
+   * css-csslint (style and error check with CSSLint
+     (https://github.com/CSSLint/csslint))
+
+D
+=
+
+   * d-dmd (DMD (http://dlang.org/)), with the following options:
+
+    `flycheck-dmd-include-path'
+          A list of include directories for DMD.
+
+
+   The extension flycheck/flycheck-d-unittest,flycheck-d-unittest adds
+a syntax checker which runs D unittests on the fly and reports the
+results.
+
+Elixir
+======
+
+   * elixir (Elixir interpreter (http://elixir-lang.org/))
+
+Emacs Lisp
+==========
+
+  1. emacs-lisp (syntax check with the built-in Emacs byte compiler)
+
+  2. emacs-lisp-checkdoc (code and documentation check with `checkdoc')
+
+   The extension purcell/flycheck-package,flycheck-package adds a
+syntax checker which checks for violations of Emacs Lisp packaging
+conventions.
+
+   The emacs-lisp checker provides the following options
+
+`flycheck-emacs-lisp-load-path'
+     The load path to use while checking Emacs Lisp files, as list of
+     strings.  Relative directories are expanded against the
+     `default-directory' of the buffer being checked.
+
+`flycheck-emacs-lisp-initialize-packages'
+     Whether to initialize Emacs' package manager with
+     `package-initialize' before checking the buffer.  If set to `auto'
+     (the default), only initialize the package managers for files in
+     under `user-emacs-directory'.
+
+`flycheck-emacs-lisp-package-user-dir'
+     The package directory for the Emacs Lisp checker, as string.  Has
+     no effect if `flycheck-emacs-lisp-initialize-packages' is nil.
+
+Erlang
+======
+
+   * erlang (Erlang (http://www.erlang.org/))
+
+ERuby
+=====
+
+   * eruby-erubis (`erubis' (http://www.kuwata-lab.com/erubis/))
+
+Fortran
+=======
+
+  1. fortran-gfortran (GFortran
+     (https://gcc.gnu.org/onlinedocs/gfortran/)), with the following
+     options:
+
+    `flycheck-gfortran-args'
+          A list of additional arguments to GFortran.
+
+    `flycheck-gfortran-include-path'
+          A list of include directories for GFortran.  Relative paths
+          are relative to the file being checked.
+
+    `flycheck-gfortran-language-standard'
+          The language standard to use with GFortran, for the `-std'
+          option.
+
+    `flycheck-gfortran-layout'
+          The source code layout to use with GFortran.  Set to `free' or
+          `fixed' for free or fixed layout respectively, or nil (the
+          default) to let GFortran automatically determine the layout.
+
+    `flycheck-gfortran-warnings'
+          A list of warnings enabled for GFortran, via the `-W' option.
+
+
+Go
+==
+
+  1. go-gofmt (syntax check with gofmt (http://golang.org/cmd/gofmt/))
+
+  2. go-golint (coding style with Golint
+     (https://github.com/golang/lint))
+
+  3. go-vet (check for suspicious code with `go tool vet'
+     (http://godoc.org/golang.org/x/tools/cmd/vet))
+
+  4. go-build or go-test (syntax and type check with Go
+     (http://golang.org/cmd/go), for source and tests respectively)
+
+  5. go-errcheck (check for unhandled error returns with errcheck
+     (https://github.com/kisielk/errcheck))
+
+   go-vet provides the following option:
+
+`flycheck-go-vet-print-functions'
+     A list of print-like functions for go vet.  Go vet will check these
+     functions for format string problems.
+
+Haml
+====
+
+   * haml (Haml (http://haml.info/))
+
+Handlebars
+==========
+
